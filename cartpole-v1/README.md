@@ -12,12 +12,12 @@ It is a value based Reinforcement Learning Algorithm. It tries to learn the qual
 Q-Values are updated using the Bellmen Equation:
         Q(s,a) = Q(s,a) + (alpha)[r + (gamma)maxQ(s',a') - Q(s,a)] 
 Where:
-s: current state
-a: action taken
-r: reward received
-s': next state
-alpha: learning rate
-gamma: discount factor (how much future rewards are valued)
+. s: current state
+. a: action taken
+. r: reward received
+. s': next state
+. alpha: learning rate
+. gamma: discount factor (how much future rewards are valued)
 
 
 Note: A good introduction to reinforcement learning
