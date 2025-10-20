@@ -15,13 +15,13 @@ It is a value based Reinforcement Learning Algorithm. It tries to learn the qual
         Q-Values are updated using the Bellmen Equation:
         Q(s,a) = Q(s,a) + (alpha)[r + (gamma)maxQ(s',a') - Q(s,a)] 
         
-Where:
-1. s: current state
-2. a: action taken
-3. r: reward received
-4. s': next state
-5. alpha: learning rate
-6. gamma: discount factor (how much future rewards are valued)
+        Where:
+        s: current state
+        a: action taken
+        r: reward received
+        s': next state
+        alpha: learning rate
+        gamma: discount factor (how much future rewards are valued)
 
 Deep Q-Network(DQN):
 ----------------
