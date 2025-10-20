@@ -10,7 +10,7 @@ CartPole-v1 environment:
 
 Q-Learning concept:
 --------------------
-It is a value based Reinforcement Learning Algorithm. It tries to learn the quality(Q-value) of each action in each state. The Q-value represents how good it is to take a particular action on a given state. The agent uses these Q-values to choose the best possible action. 
+It is a value based Reinforcement Learning Algorithm. It tries to learn the quality(Q-value) of each action in each state. The Q-value represents how good it is to take a particular action on a given state. The agent uses these Q-values to choose the best possible action. In the Q-table, the action values are learned and updated iteratively through agent's interection with the environment. 
 
         Q-Values are updated using the Bellmen Equation:
         Q(s,a) = Q(s,a) + (alpha)[r + (gamma)maxQ(s',a') - Q(s,a)] 
