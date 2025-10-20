@@ -11,13 +11,14 @@ Q-Learning concept:
 It is a value based Reinforcement Learning Algorithm. It tries to learn the quality(Q-value) of each action in each state. The Q-value represents how good it is to take a particular action on a given state. The agent uses these Q-values to choose the best possible action. 
 Q-Values are updated using the Bellmen Equation:
         Q(s,a) = Q(s,a) + (alpha)[r + (gamma)maxQ(s',a') - Q(s,a)] 
+        
 Where:
-. s: current state
-. a: action taken
-. r: reward received
-. s': next state
-. alpha: learning rate
-. gamma: discount factor (how much future rewards are valued)
+1. s: current state
+2. a: action taken
+3. r: reward received
+4. s': next state
+5. alpha: learning rate
+6. gamma: discount factor (how much future rewards are valued)
 
 
 Note: A good introduction to reinforcement learning
