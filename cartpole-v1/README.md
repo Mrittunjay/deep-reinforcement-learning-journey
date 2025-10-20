@@ -22,12 +22,35 @@ Where:
 5. alpha: learning rate
 6. gamma: discount factor (how much future rewards are valued)
 
-Deep Q-Network:
+Deep Q-Network(DQN):
 ----------------
 In environments like cartpole, the number of states are continewous(not finite), so we cannot store Q-values in a table, instead we use a neural netwrok to approximate the Q-function this is called a Deep-Q-Network.
 
+DQN Workflow:
+--------------
+1. Observe the current state(cart position, pole angle, etc).
+2. Predict Q-value for each possible action(move left or move right).
+3. Choose an action.
+   
+        a. Either random (Exploration).
+        b. Or one with highest predicted Q-value (Exploration).
 
-dfdfd
+5. Perform the action and get next state and reward.
+6. Store (state, action, reward, next state) tuple in a reply buffer.
+7. Train the network using random sample from the buffer.
+8. Update the target network periodically for stability.
+9. The agent uses an ε-greedy strategy:
+
+        a. With probability ε, choose a random action (explore)
+        b. With probability 1−ε, choose the best-known action (exploit)
+        c. At the start, ε is high (e.g., 1.0) → agent explores more.
+           Over time, ε decays to a small value (e.g., 0.02) → agent exploits what it has learned.
+    
+10. Learning process
+
+        a. The reward per episode starts low(pole falls quickly)
+        b. Gradually, as the Q-Network improves, the agent balances the pole longer.
+        c. A well trained agent can keep the pole upright for more than 450 steps, and in my case parfect score is 500 steps. 
 
 
 Note: A good introduction to reinforcement learning
